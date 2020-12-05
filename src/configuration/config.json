@@ -1,0 +1,11 @@
+{
+	"api": {
+		"url": "https://rickandmortyapi.com/api",
+		"paths": {
+			"characters": "/character",
+			"locations": "/location",
+			"episodes": "/episode"
+		},
+		"page_size": 20
+	}
+}
