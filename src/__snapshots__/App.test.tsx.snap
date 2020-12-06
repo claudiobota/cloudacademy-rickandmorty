@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App app renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div
+      class="wrapper"
+    >
+      <div
+        class="p-paginator p-component p-ml-auto p-mr-auto p-mb-5"
+      >
+        <button
+          class="p-paginator-first p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-double-left"
+          />
+        </button>
+        <button
+          class="p-paginator-prev p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-left"
+          />
+        </button>
+        <span
+          class="p-paginator-pages"
+        >
+          <button
+            class="p-paginator-page p-paginator-element p-link p-highlight"
+            type="button"
+          >
+            1
+          </button>
+        </span>
+        <button
+          class="p-paginator-next p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-right"
+          />
+        </button>
+        <button
+          class="p-paginator-last p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-double-right"
+          />
+        </button>
+      </div>
+      <div
+        class="p-grid p-align-stretch"
+      />
+      <div
+        class="p-paginator p-component p-ml-auto p-mr-auto p-mt-5"
+      >
+        <button
+          class="p-paginator-first p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-double-left"
+          />
+        </button>
+        <button
+          class="p-paginator-prev p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-left"
+          />
+        </button>
+        <span
+          class="p-paginator-pages"
+        >
+          <button
+            class="p-paginator-page p-paginator-element p-link p-highlight"
+            type="button"
+          >
+            1
+          </button>
+        </span>
+        <button
+          class="p-paginator-next p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-right"
+          />
+        </button>
+        <button
+          class="p-paginator-last p-paginator-element p-link p-disabled"
+          disabled=""
+          type="button"
+        >
+          <span
+            class="p-paginator-icon pi pi-angle-double-right"
+          />
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

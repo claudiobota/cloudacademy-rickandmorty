@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterItem component renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="p-card p-component character"
+  >
+    <div
+      class="p-card-body"
+    >
+      <div
+        class="p-card-title"
+      >
+        Rick Sanchez
+      </div>
+      <div
+        class="p-card-content"
+      >
+        <section
+          class="profile-picture p-text-center"
+        >
+          <img
+            alt="Rick Sanchez"
+            src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+          />
+        </section>
+        <section
+          class="information p-mt-5"
+        >
+          <div
+            class="information-item p-pt-1 p-pb-1 p-mb-1"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4"
+              >
+                <strong>
+                  Status
+                </strong>
+              </div>
+              <div
+                class="p-col-8"
+              >
+                <span>
+                  Alive
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="information-item p-pt-1 p-pb-1 p-mb-1"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4"
+              >
+                <strong>
+                  Species
+                </strong>
+              </div>
+              <div
+                class="p-col-8"
+              >
+                <span>
+                  Human
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="information-item p-pt-1 p-pb-1 p-mb-1"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4"
+              >
+                <strong>
+                  Gender
+                </strong>
+              </div>
+              <div
+                class="p-col-8"
+              >
+                <span>
+                  Male
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="information-item p-pt-1 p-pb-1 p-mb-1"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4"
+              >
+                <strong>
+                  Type
+                </strong>
+              </div>
+              <div
+                class="p-col-8"
+              >
+                <span />
+              </div>
+            </div>
+          </div>
+          <div
+            class="information-item p-pt-1 p-pb-1 p-mb-1"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4"
+              >
+                <strong>
+                  Origin
+                </strong>
+              </div>
+              <div
+                class="p-col-8"
+              >
+                <a
+                  href="https://rickandmortyapi.com/api/location/1"
+                  target="_blank"
+                >
+                  Earth (C-137)
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="information-item p-pt-1 p-pb-1 p-mb-1"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4"
+              >
+                <strong>
+                  Location
+                </strong>
+              </div>
+              <div
+                class="p-col-8"
+              >
+                <a
+                  href="https://rickandmortyapi.com/api/location/20"
+                  target="_blank"
+                >
+                  Earth (Replacement Dimension)
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div
+          class="p-mt-auto"
+        >
+          <section
+            class="button-bar p-mt-3"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-4 p-text-center"
+              >
+                <button
+                  class="p-button p-component p-button-rounded p-button-outlined p-button-icon-only"
+                >
+                  <span
+                    class="pi pi-globe p-c"
+                  />
+                  <span
+                    class="p-button-label p-c"
+                  >
+                     
+                  </span>
+                </button>
+              </div>
+              <div
+                class="p-col-4 p-text-center"
+              >
+                <button
+                  class="p-button p-component p-button-rounded p-button-outlined p-button-icon-only"
+                >
+                  <span
+                    class="pi pi-home p-c"
+                  />
+                  <span
+                    class="p-button-label p-c"
+                  >
+                     
+                  </span>
+                </button>
+              </div>
+              <div
+                class="p-col-4 p-text-center"
+              >
+                <button
+                  class="p-button p-component p-button-rounded p-button-outlined p-button-icon-only"
+                >
+                  <span
+                    class="pi pi-external-link p-c"
+                  />
+                  <span
+                    class="p-button-label p-c"
+                  >
+                     
+                  </span>
+                </button>
+              </div>
+            </div>
+          </section>
+          <footer
+            class="p-mt-3"
+          >
+            <div
+              class="p-grid"
+            >
+              <div
+                class="p-col-12"
+              >
+                <button
+                  class="p-button p-component p-button-raised p-button-lg p-text-uppercase p-text-bold"
+                  style="width: 100%;"
+                >
+                  <span
+                    class="p-button-label p-c"
+                  >
+                    View Episodes
+                  </span>
+                </button>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <div
+          class="p-dialog-mask p-component-overlay p-dialog-center"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

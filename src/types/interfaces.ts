@@ -28,11 +28,31 @@ export interface IConfig {
 }
 
 export interface IFetchCharactersResponse {
-  info: {
+  info?: {
     count: number;
     pages: number;
     next: string|null;
     prev: string|null;
   }
-  results: ICharacter[];
+  results?: ICharacter[];
+  error?: string;
+}
+
+export interface IFetchEpisodesResponse {
+  info?: {
+    count: number;
+    pages: number;
+    next: string|null;
+    prev: string|null;
+  }
+  results?: IEpisode[];
+  error?: string;
+}
+
+export interface IEpisode {
+  id: number;
+  name: string;
+  air_date: string;
+  episode: string;
+  characters: string;
 }

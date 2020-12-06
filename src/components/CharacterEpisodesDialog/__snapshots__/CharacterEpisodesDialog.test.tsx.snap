@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterEpisodesDialog renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="p-dialog-mask p-component-overlay p-dialog-center"
+  />
+</DocumentFragment>
+`;
+
+exports[`CharacterEpisodesDialog renders visible and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="p-dialog-mask p-component-overlay p-dialog-visible p-dialog-center"
+    style="z-index: 1000;"
+  >
+    <div
+      aria-labelledby="pr_id_2_header"
+      class="p-dialog p-component p-dialog-enter p-dialog-enter-active"
+      id="pr_id_2"
+      role="dialog"
+      style="width: 95vw; max-width: 800px;"
+    >
+      <div
+        class="p-dialog-header"
+      >
+        <span
+          class="p-dialog-title"
+          id="pr_id_2_header"
+        >
+          View all episodes of Rick Sanchez
+        </span>
+        <div
+          class="p-dialog-header-icons"
+        >
+          <button
+            aria-label="Close"
+            class="p-dialog-header-icon p-dialog-header-close p-link"
+            type="button"
+          >
+            <span
+              class="p-dialog-header-close-icon pi pi-times"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="p-dialog-content"
+      >
+        <div
+          class="p-datatable p-component p-datatable-gridlines"
+          data-scrollselectors=".p-datatable-scrollable-body, .p-datatable-unfrozen-view .p-datatable-scrollable-body"
+        >
+          <div
+            class="p-datatable-wrapper"
+          >
+            <table
+              role="grid"
+            >
+              <thead
+                class="p-datatable-thead"
+              >
+                <tr>
+                  <th
+                    class=""
+                  >
+                    <span
+                      class="p-column-title"
+                    >
+                      Name
+                    </span>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <span
+                      class="p-column-title"
+                    >
+                      Air Date
+                    </span>
+                  </th>
+                  <th
+                    class=""
+                  >
+                    <span
+                      class="p-column-title"
+                    >
+                      Episode
+                    </span>
+                  </th>
+                </tr>
+              </thead>
+              <tbody
+                class="p-datatable-tbody"
+              />
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

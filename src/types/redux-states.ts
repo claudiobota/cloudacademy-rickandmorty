@@ -1,4 +1,4 @@
-import {ICharacter} from './interfaces';
+import {ICharacter, IEpisode} from './interfaces';
 
 export interface CharacterState {
   items: ICharacter[];
@@ -12,6 +12,13 @@ export interface CharacterState {
   page: number;
 }
 
+export interface EpisodeState {
+  items: IEpisode[];
+  status: string;
+  error: any;
+}
+
 export interface StoreState {
   character: CharacterState;
+  episode: EpisodeState;
 }

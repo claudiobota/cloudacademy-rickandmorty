@@ -1,6 +1,5 @@
 import {createAsyncThunk, createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {CharacterState, StoreState} from '../../types/redux-states';
-import {ICharacter, IFetchCharactersResponse} from '../../types/interfaces';
 import ApiService from '../../services/api';
 
 const initialState: CharacterState = {
@@ -36,11 +35,11 @@ export const characterSlice = createSlice({
 
     builder.addCase(fetchCharacters.fulfilled, (state, action) => {
       state.status = 'succeeded';
-      state.items = action.payload.results;
-      state.prev = action.payload.info.prev;
-      state.next = action.payload.info.next;
-      state.count = action.payload.info.count;
-      state.pages = action.payload.info.pages;
+      state.items = action.payload.results || [];
+      state.prev = (action.payload.info && action.payload.info.prev) || null;
+      state.next = (action.payload.info && action.payload.info.next) || null;
+      state.count = (action.payload.info && action.payload.info.count) || 0;
+      state.pages = (action.payload.info && action.payload.info.pages) || 0;
     });
 
     builder.addCase(fetchCharacters.rejected, (state, action) => {
