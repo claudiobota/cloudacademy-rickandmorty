@@ -49,7 +49,7 @@ export default function CharacterItem(props: { character: ICharacter }) {
               <strong>Origin</strong>
             </div>
             <div className="p-col-8">
-              <a href={character.origin.url} target="_blank">{character.origin.name}</a>
+              {character.origin.name}
             </div>
           </div>
         </div>
@@ -60,7 +60,7 @@ export default function CharacterItem(props: { character: ICharacter }) {
               <strong>Location</strong>
             </div>
             <div className="p-col-8">
-              <a href={character.location.url} target="_blank">{character.location.name}</a>
+              {character.location.name}
             </div>
           </div>
         </div>
@@ -69,14 +69,8 @@ export default function CharacterItem(props: { character: ICharacter }) {
       <div className="p-mt-auto">
         <section className="button-bar p-mt-3">
           <div className="p-grid">
-            <div className="p-col-4 p-text-center">
-              <Button icon="pi pi-globe" className="p-button-rounded p-button-outlined" tooltip="View location's residents" tooltipOptions={{position: 'top'}} />
-            </div>
-            <div className="p-col-4 p-text-center">
-              <Button icon="pi pi-home" className="p-button-rounded p-button-outlined" tooltip="View origin's residents" tooltipOptions={{position: 'top'}} />
-            </div>
-            <div className="p-col-4 p-text-center">
-              <Button icon="pi pi-external-link" className="p-button-rounded p-button-outlined" tooltip="External Link" tooltipOptions={{position: 'top'}} onClick={() => window.open(`https://rickandmorty.fandom.com/wiki/${character.name.replace(' ', '_')}`, '_blank')} />
+            <div className="p-col-12 p-text-center">
+              <Button icon="pi pi-external-link" className="p-button-rounded p-button-outlined" tooltip="View Wiki page" tooltipOptions={{position: 'top'}} onClick={() => window.open(`https://rickandmorty.fandom.com/wiki/${character.name.replace(' ', '_')}`, '_blank')} />
             </div>
           </div>
         </section>

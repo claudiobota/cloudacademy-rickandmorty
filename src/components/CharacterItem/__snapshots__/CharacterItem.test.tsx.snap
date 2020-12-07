@@ -129,12 +129,7 @@ exports[`CharacterItem component renders and matches snapshot 1`] = `
               <div
                 class="p-col-8"
               >
-                <a
-                  href="https://rickandmortyapi.com/api/location/1"
-                  target="_blank"
-                >
-                  Earth (C-137)
-                </a>
+                Earth (C-137)
               </div>
             </div>
           </div>
@@ -154,12 +149,7 @@ exports[`CharacterItem component renders and matches snapshot 1`] = `
               <div
                 class="p-col-8"
               >
-                <a
-                  href="https://rickandmortyapi.com/api/location/20"
-                  target="_blank"
-                >
-                  Earth (Replacement Dimension)
-                </a>
+                Earth (Replacement Dimension)
               </div>
             </div>
           </div>
@@ -174,39 +164,7 @@ exports[`CharacterItem component renders and matches snapshot 1`] = `
               class="p-grid"
             >
               <div
-                class="p-col-4 p-text-center"
-              >
-                <button
-                  class="p-button p-component p-button-rounded p-button-outlined p-button-icon-only"
-                >
-                  <span
-                    class="pi pi-globe p-c"
-                  />
-                  <span
-                    class="p-button-label p-c"
-                  >
-                     
-                  </span>
-                </button>
-              </div>
-              <div
-                class="p-col-4 p-text-center"
-              >
-                <button
-                  class="p-button p-component p-button-rounded p-button-outlined p-button-icon-only"
-                >
-                  <span
-                    class="pi pi-home p-c"
-                  />
-                  <span
-                    class="p-button-label p-c"
-                  >
-                     
-                  </span>
-                </button>
-              </div>
-              <div
-                class="p-col-4 p-text-center"
+                class="p-col-12 p-text-center"
               >
                 <button
                   class="p-button p-component p-button-rounded p-button-outlined p-button-icon-only"
