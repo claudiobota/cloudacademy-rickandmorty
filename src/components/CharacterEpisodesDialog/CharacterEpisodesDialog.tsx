@@ -19,7 +19,7 @@ function CharacterEpisodesDialog(props: IProps, ref: any) {
   useEffect(() => {
     const episodeIds = props.character.episode.map(episodeUrl => Number(episodeUrl.replace(`${config.api.url}${config.api.paths.episodes}/`, '')));
     setCharacterEpisodes(episodes.filter(episode => episodeIds.indexOf(episode.id) > -1));
-  }, [episodes]);
+  }, [episodes, props.character.episode]);
 
   useImperativeHandle(
     ref,

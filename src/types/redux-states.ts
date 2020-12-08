@@ -1,4 +1,4 @@
-import {ICharacter, IEpisode} from './interfaces';
+import {ICharacter, IEpisode, ILocation} from './interfaces';
 
 export interface CharacterState {
   items: ICharacter[];
@@ -21,4 +21,9 @@ export interface EpisodeState {
 export interface StoreState {
   character: CharacterState;
   episode: EpisodeState;
+}
+
+export interface LocationState {
+  selected: ILocation;
+  residents: ICharacter[];
 }

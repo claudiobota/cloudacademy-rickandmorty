@@ -5,23 +5,25 @@ import CharacterItem from '../CharacterItem/CharacterItem';
 import {characterActions, fetchCharacters, selectAllCharacters} from '../../redux/slices/characterSlice';
 import {Paginator} from 'primereact/paginator';
 import config from '../../configuration/config';
+import {ICharacter} from '../../types/interfaces';
 
-export default function CharactersListing() {
-  const dispatch = useDispatch();
-  const characters = useSelector(selectAllCharacters);
-  const status = useSelector((state: StoreState) => state.character.status);
-  const page = useSelector((state: StoreState) => state.character.page);
-  const count = useSelector((state: StoreState) => state.character.count);
-
-  useEffect(() => {
-    if (status === 'idle') {
-      dispatch(fetchCharacters(page));
-    }
-  }, [status, dispatch]);
+interface CharactersListingProps {
+  characters: ICharacter[];
+  hasPagination?: boolean;
+  onPageChange?: (page: number) => void;
+  page?: number;
+  count?: number;
+}
+export default function CharactersListing(props: CharactersListingProps) {
+  const count = props.count || 0;
+  const page = props.page || 1;
+  const onPageChange = props.onPageChange || ((page: number) => {});
+  const characters = props.characters || [];
+  const hasPagination = props.hasPagination === true;
 
   return (
     <div className="wrapper">
-      <Paginator className="p-ml-auto p-mr-auto p-mb-5" rows={config.api.page_size} first={config.api.page_size * (page - 1)} totalRecords={count} onPageChange={e => dispatch(characterActions.changePage(e.page + 1))} />
+      {hasPagination && <Paginator className="p-ml-auto p-mr-auto p-mb-5" rows={config.api.page_size} first={config.api.page_size * (page - 1)} totalRecords={count} onPageChange={e => onPageChange(e.page + 1)} />}
       <div className="p-grid p-align-stretch">
         {characters.map((character, index) => {
           return (
@@ -31,7 +33,7 @@ export default function CharactersListing() {
           );
         })}
       </div>
-      <Paginator className="p-ml-auto p-mr-auto p-mt-5" rows={config.api.page_size} first={config.api.page_size * (page - 1)} totalRecords={count} onPageChange={e => dispatch(characterActions.changePage(e.page + 1))} />
+      {hasPagination && <Paginator className="p-ml-auto p-mr-auto p-mt-5" rows={config.api.page_size} first={config.api.page_size * (page - 1)} totalRecords={count} onPageChange={e => onPageChange(e.page + 1)} />}
     </div>
   )
 }

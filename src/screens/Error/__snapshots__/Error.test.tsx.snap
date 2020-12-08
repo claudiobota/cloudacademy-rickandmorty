@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error screen renders and matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container p-text-center p-text-uppercase"
+  >
+    <h1
+      class="p-mb-1"
+      style="color: rgb(255, 255, 255); font-size: 50px;"
+    >
+      404
+    </h1>
+    <h2
+      class="p-mt-0"
+      style="color: rgb(255, 255, 255); opacity: 0.5;"
+    >
+      Page not found
+    </h2>
+  </div>
+</DocumentFragment>
+`;

@@ -1,6 +1,6 @@
 import config from '../configuration/config';
 import {IApiService} from '../types/services';
-import {IEpisode, IFetchCharactersResponse, IFetchEpisodesResponse} from '../types/interfaces';
+import {ICharacter, IEpisode, IFetchCharactersResponse, IFetchEpisodesResponse, ILocation} from '../types/interfaces';
 
 const retrieveEpisodes = (page: number) => new Promise<IFetchEpisodesResponse>((resolve, reject) => {
   fetch(`${config.api.url}/${config.api.paths.episodes}/?page=${page}`)
@@ -13,10 +13,42 @@ const retrieveEpisodes = (page: number) => new Promise<IFetchEpisodesResponse>((
 });
 
 const ApiService: IApiService = {
-  retrieveCharacters: page => new Promise<IFetchCharactersResponse>((resolve, reject) => {
-    fetch(`${config.api.url}/${config.api.paths.characters}/?page=${page}`)
+  retrieveCharacters: (page) => new Promise<IFetchCharactersResponse>((resolve, reject) => {
+    const queryObject: any = {};
+
+    if (page > -1) {
+      queryObject.page = page;
+    }
+
+    let queryString = Object.keys(queryObject).map(key => `${key}=${queryObject[key]}`).join('&');
+
+    if (queryString.length > 0) {
+      queryString = `?${queryString}`;
+    }
+
+    fetch(`${config.api.url}/${config.api.paths.characters}/${queryString}`)
       .then(response => response.json())
       .then(response => resolve(response))
+      .catch(error => {
+        console.error(error);
+        reject(error);
+      });
+  }),
+  retrieveCharactersByIds: (ids = []) => new Promise<ICharacter[]>((resolve, reject) => {
+    if (ids.length === 0) {
+      resolve([]);
+      return;
+    }
+
+    fetch(`${config.api.url}/${config.api.paths.characters}/${ids.join(',')}`)
+      .then(response => response.json())
+      .then(response => {
+        if (!Array.isArray(response) && typeof response === 'object') {
+          resolve([response]);
+        } else {
+          resolve(response);
+        }
+      })
       .catch(error => {
         console.error(error);
         reject(error);
@@ -59,7 +91,16 @@ const ApiService: IApiService = {
 
       return 0;
     }));
-  })
+  }),
+  retrieveLocation: locationId => new Promise<ILocation>((resolve, reject) => {
+    fetch(`${config.api.url}/${config.api.paths.locations}/${locationId}`)
+      .then(response => response.json())
+      .then(response => resolve(response))
+      .catch(error => {
+        console.error(error);
+        reject(error);
+      });
+  }),
 }
 
 export default ApiService;

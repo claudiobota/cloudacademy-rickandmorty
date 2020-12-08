@@ -129,7 +129,11 @@ exports[`CharacterItem component renders and matches snapshot 1`] = `
               <div
                 class="p-col-8"
               >
-                Earth (C-137)
+                <a
+                  href="/location/1"
+                >
+                  Earth (C-137)
+                </a>
               </div>
             </div>
           </div>
@@ -149,7 +153,11 @@ exports[`CharacterItem component renders and matches snapshot 1`] = `
               <div
                 class="p-col-8"
               >
-                Earth (Replacement Dimension)
+                <a
+                  href="/location/20"
+                >
+                  Earth (Replacement Dimension)
+                </a>
               </div>
             </div>
           </div>

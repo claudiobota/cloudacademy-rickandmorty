@@ -4,6 +4,8 @@ import {ICharacter} from '../../types/interfaces';
 import './CharacterItem.css';
 import {Button} from 'primereact/button';
 import CharacterEpisodesDialog from '../CharacterEpisodesDialog/CharacterEpisodesDialog';
+import { Link } from 'react-router-dom';
+import config from '../../configuration/config';
 
 export default function CharacterItem(props: { character: ICharacter }) {
   const { character } = props;
@@ -19,6 +21,10 @@ export default function CharacterItem(props: { character: ICharacter }) {
 
   const onViewEpisodesClick = () => {
     episodesDialogRef.current.show();
+  }
+
+  const getLocationIdFromUrl = (url: string) => {
+    return Number(url.replace(`${config.api.url}${config.api.paths.locations}/`, ''));
   }
 
   return (
@@ -49,7 +55,9 @@ export default function CharacterItem(props: { character: ICharacter }) {
               <strong>Origin</strong>
             </div>
             <div className="p-col-8">
-              {character.origin.name}
+              <Link to={`/location/${getLocationIdFromUrl(character.origin.url)}`}>
+                {character.origin.name}
+              </Link>
             </div>
           </div>
         </div>
@@ -60,7 +68,9 @@ export default function CharacterItem(props: { character: ICharacter }) {
               <strong>Location</strong>
             </div>
             <div className="p-col-8">
-              {character.location.name}
+              <Link to={`/location/${getLocationIdFromUrl(character.location.url)}`}>
+                {character.location.name}
+              </Link>
             </div>
           </div>
         </div>
